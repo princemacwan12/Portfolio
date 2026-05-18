@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prince Macwan — IT Student & AI Builder</title>
+<meta name="description" content="Portfolio of Prince Manishkumar Macwan — IT student building AI-powered healthcare tools, deepfake detection, and full-stack applications." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        },
+        colors: {
+          background: 'oklch(0.16 0.012 60)',
+          foreground: 'oklch(0.96 0.012 80)',
+          surface: 'oklch(0.21 0.014 60)',
+          muted: { DEFAULT: 'oklch(0.24 0.012 60)', foreground: 'oklch(0.68 0.018 70)' },
+          border: 'oklch(0.3 0.014 60)',
+          primary: { DEFAULT: 'oklch(0.72 0.17 45)', foreground: 'oklch(0.16 0.012 60)' },
+          ember: { DEFAULT: 'oklch(0.72 0.17 45)', glow: 'oklch(0.82 0.14 65)' },
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: oklch(0.16 0.012 60);
+    color: oklch(0.96 0.012 80);
+    font-family: 'Inter', system-ui, sans-serif;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.72 0.17 45 / 0.15), transparent),
+      radial-gradient(ellipse 60% 50% at 100% 100%, oklch(0.72 0.17 45 / 0.08), transparent);
+    background-attachment: fixed;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
+  .ember-text {
+    background: linear-gradient(135deg, oklch(0.72 0.17 45) 0%, oklch(0.82 0.14 65) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .marquee { animation: marquee 40s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .text-balance { text-wrap: balance; }
+  .icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; }
+</style>
+</head>
+<body class="font-sans">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40">
+  <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+    <a href="#top" class="font-display text-lg tracking-tight">Prince<span class="text-primary">.</span></a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+      <a href="#about" class="hover:text-foreground transition">About</a>
+      <a href="#work" class="hover:text-foreground transition">Work</a>
+      <a href="#education" class="hover:text-foreground transition">Education</a>
+      <a href="#contact" class="hover:text-foreground transition">Contact</a>
+    </nav>
+    <a href="#contact" class="text-sm px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition">Let's talk ↗</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative mx-auto max-w-6xl px-6 pt-24 pb-32">
+  <div class="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
+    <span class="w-8 h-px bg-primary"></span> ✦ Available for internships
+  </div>
+  <h1 class="font-display text-6xl md:text-8xl lg:text-9xl leading-[0.95] text-balance">
+    Building <em class="ember-text not-italic font-light">intelligent</em><br>
+    software for the<br>next decade.
+  </h1>
+  <div class="mt-12 grid md:grid-cols-[2fr_1fr] gap-8 items-end">
+    <p class="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+      I'm <span class="text-foreground font-medium">Prince Macwan</span>, an IT student at MBIT exploring the edges of AI, computer vision, and full-stack engineering — turning class projects into things that could matter.
+    </p>
+    <div class="flex flex-col gap-2 text-sm">
+      <div class="flex items-center gap-2 text-muted-foreground">📍 Anand, Gujarat</div>
+      <div class="flex items-center gap-2 text-muted-foreground">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Open to opportunities
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="border-y border-border/40 py-6 overflow-hidden bg-surface/40">
+  <div class="marquee flex gap-12 whitespace-nowrap font-display text-3xl md:text-5xl" id="marquee"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="mx-auto max-w-6xl px-6 py-32">
+  <div class="grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4"><p class="text-xs uppercase tracking-[0.3em] text-primary">/ About</p></div>
+    <div class="md:col-span-8 space-y-6 text-xl md:text-2xl leading-relaxed font-display">
+      <p>An IT student with a growing foundation in programming, web development, database systems, and software engineering.</p>
+      <p class="text-muted-foreground">I've built academic projects ranging from deepfake analysis to full-stack CRUD apps — but I'm most energized by the messy intersection of <em class="text-primary not-italic">AI, healthcare, and access</em>. Logical, curious, and quick to learn what the moment demands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="mx-auto max-w-6xl px-6 py-20">
+  <div class="grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary">/ Toolkit</p>
+      <h2 class="font-display text-4xl mt-4">What I work with</h2>
+    </div>
+    <div class="md:col-span-8 grid sm:grid-cols-2 gap-6" id="skills"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="work" class="mx-auto max-w-6xl px-6 py-32">
+  <div class="flex items-end justify-between mb-16">
+    <div>
+      <p class="text-xs uppercase tracking-[0.3em] text-primary">/ Selected Work</p>
+      <h2 class="font-display text-5xl md:text-6xl mt-4">Projects</h2>
+    </div>
+    <p class="text-sm text-muted-foreground hidden md:block">2024 — Present</p>
+  </div>
+  <div id="projects" class="space-y-px"></div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="mx-auto max-w-6xl px-6 py-32">
+  <div class="grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4"><p class="text-xs uppercase tracking-[0.3em] text-primary">/ Education & Wins</p></div>
+    <div class="md:col-span-8 space-y-8">
+      <div class="border-l-2 border-primary pl-6">
+        <p class="text-sm text-muted-foreground">2023 — Present</p>
+        <h3 class="font-display text-3xl mt-1">B.Tech, Information Technology</h3>
+        <p class="text-muted-foreground mt-1">MBIT College · <span class="text-primary">CGPA 8.5</span></p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="border border-border rounded-lg p-5 bg-surface/40"><p class="text-xs uppercase tracking-wider text-muted-foreground">HSC, 2023</p><p class="font-display text-3xl mt-1">64%</p></div>
+        <div class="border border-border rounded-lg p-5 bg-surface/40"><p class="text-xs uppercase tracking-wider text-muted-foreground">SSC, 2021</p><p class="font-display text-3xl mt-1">89%</p></div>
+      </div>
+      <div class="border border-primary/40 rounded-lg p-6 bg-primary/5">
+        <p class="text-xs uppercase tracking-wider text-primary mb-2">Achievement</p>
+        <h3 class="font-display text-2xl">1st Runner-up · CVMU Hackathon 2.0</h3>
+        <p class="text-muted-foreground text-sm mt-2">CVM University · Active volunteer across inter-college activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="mx-auto max-w-6xl px-6 py-32">
+  <p class="text-xs uppercase tracking-[0.3em] text-primary mb-6">/ Get in touch</p>
+  <h2 class="font-display text-6xl md:text-8xl leading-[0.95] text-balance">
+    Let's build<br>something <em class="ember-text not-italic font-light">worth</em> shipping.
+  </h2>
+  <div class="mt-12 grid md:grid-cols-2 gap-4 max-w-3xl" id="contacts"></div>
+</section>
+
+<footer class="border-t border-border/40 mt-20">
+  <div class="mx-auto max-w-6xl px-6 py-8 flex items-center justify-between text-sm text-muted-foreground">
+    <p>© 2026 Prince Macwan</p>
+    <p class="font-mono">Designed & coded with intent.</p>
+  </div>
+</footer>
+
+<script>
+  // Marquee
+  const words = ["Artificial Intelligence","Computer Vision","Full-Stack","Healthcare AI","Deep Learning","Problem Solving"];
+  const row = [...words,...words,...words];
+  document.getElementById('marquee').innerHTML = row.map((w,i)=>
+    `<span class="flex items-center gap-12"><span class="${i%2?'text-foreground':'text-muted-foreground/40'}">${w}</span><span class="text-primary">✦</span></span>`
+  ).join('');
+
+  // Skills
+  const skills = {
+    Languages: ["C","C++","JavaScript","Python"],
+    Frontend: ["HTML","CSS","React"],
+    Backend: ["Node.js","REST APIs"],
+    Database: ["SQL","MongoDB"],
+  };
+  document.getElementById('skills').innerHTML = Object.entries(skills).map(([cat,items])=>`
+    <div class="border border-border/60 rounded-lg p-6 bg-surface/40 hover:border-primary/60 transition">
+      <h3 class="text-sm uppercase tracking-wider text-muted-foreground mb-3">${cat}</h3>
+      <div class="flex flex-wrap gap-2">${items.map(s=>`<span class="text-sm px-3 py-1 rounded-full bg-background border border-border">${s}</span>`).join('')}</div>
+    </div>
+  `).join('') + `
+    <div class="sm:col-span-2 border border-border/60 rounded-lg p-6 bg-surface/40">
+      <h3 class="text-sm uppercase tracking-wider text-muted-foreground mb-3">Soft Skills</h3>
+      <div class="flex flex-wrap gap-2">${["Communication","Teamwork","Leadership","Problem Solving"].map(s=>`<span class="text-sm px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/30">${s}</span>`).join('')}</div>
+    </div>`;
+
+  // Projects
+  const projects = [
+    {no:"01",title:"Medi-Mind Healthcare",tag:"AI · Healthcare",desc:"An AI-powered medical assistance platform with an X-ray Analyzer that predicts possible conditions, a Telegram bot connecting users with doctors, and an AI calling agent providing toll-free medical guidance — designed to bridge the healthcare gap for rural communities.",stack:["TensorFlow","Telegram API","Voice AI","Python"]},
+    {no:"02",title:"Deepfake Analyzer",tag:"Deep Learning · CV",desc:"A deepfake detection system built on Convolutional Neural Networks, using TensorFlow and OpenCV to analyze inconsistencies in images and videos and classify manipulated digital media with ML-based classification.",stack:["TensorFlow","OpenCV","CNN","Python"]},
+  ];
+  document.getElementById('projects').innerHTML = projects.map(p=>`
+    <article class="group border-t border-border py-10 grid md:grid-cols-12 gap-6 hover:bg-surface/30 transition px-2">
+      <div class="md:col-span-1 font-mono text-sm text-muted-foreground">${p.no}</div>
+      <div class="md:col-span-4">
+        <h3 class="font-display text-3xl md:text-4xl group-hover:text-primary transition">${p.title}</h3>
+        <p class="text-xs uppercase tracking-wider text-muted-foreground mt-2">${p.tag}</p>
+      </div>
+      <p class="md:col-span-5 text-muted-foreground leading-relaxed">${p.desc}</p>
+      <div class="md:col-span-2 flex flex-wrap gap-1.5 content-start">
+        ${p.stack.map(s=>`<span class="text-[11px] font-mono px-2 py-0.5 border border-border rounded">${s}</span>`).join('')}
+      </div>
+    </article>`).join('') + `<div class="border-t border-border"></div>`;
+
+  // Contact
+  const contacts = [
+    {icon:"✉",label:"Email",value:"princemacwan12@gmail.com",href:"mailto:princemacwan12@gmail.com"},
+    {icon:"📞",label:"Phone",value:"+91 98987 84817",href:"tel:+919898784817"},
+    {icon:"in",label:"LinkedIn",value:"Prince Macwan",href:"#"},
+    {icon:"GH",label:"GitHub",value:"princemacwan12",href:"https://github.com/princemacwan12"},
+  ];
+  document.getElementById('contacts').innerHTML = contacts.map(c=>`
+    <a href="${c.href}" class="group border border-border rounded-lg p-5 flex items-center justify-between bg-surface/40 hover:border-primary hover:bg-surface transition">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-mono text-sm">${c.icon}</div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-muted-foreground">${c.label}</p>
+          <p class="font-medium">${c.value}</p>
+        </div>
+      </div>
+      <span class="text-muted-foreground group-hover:text-primary transition">↗</span>
+    </a>`).join('');
+</script>
+</body>
+</html>
